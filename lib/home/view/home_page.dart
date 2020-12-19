@@ -24,12 +24,12 @@ class HomePage extends StatelessWidget {
               },
             ),
             RaisedButton(
-              child: const Text('Logout'),
               onPressed: () {
                 context
                     .read<AuthenticationBloc>()
                     .add(AuthenticationLogoutRequested());
               },
+              child: const Text('Logout'),
             ),
           ],
         ),

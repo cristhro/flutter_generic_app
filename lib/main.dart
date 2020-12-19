@@ -8,7 +8,7 @@ import 'package:flutter_generic_app/simple_bloc_observer.dart';
 
 import 'app.dart';
 
-void main() async {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   EquatableConfig.stringify = kDebugMode;
