@@ -1,0 +1,325 @@
+@startuml
+set namespaceSeparator ::
+
+class "flutter_generic_app::models::dialog_models.dart::DialogRequest" {
+  +String title
+  +String description
+  +String buttonTitle
+  +String cancelTitle
+}
+
+class "flutter_generic_app::models::dialog_models.dart::DialogResponse" {
+  +String fieldOne
+  +String fieldTwo
+  +bool confirmed
+}
+
+class "flutter_generic_app::app.dart::App" {
+  +AuthenticationRepository authenticationRepository
+  +Widget build()
+}
+
+"flutter_generic_app::app.dart::App" o-- "authentication_repository::src::authentication_repository.dart::AuthenticationRepository"
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "flutter_generic_app::app.dart::App"
+
+class "flutter_generic_app::app.dart::AppView" {
+  +_AppViewState createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "flutter_generic_app::app.dart::AppView"
+
+class "flutter_generic_app::app.dart::_AppViewState" {
+  -GlobalKey<NavigatorState> _navigatorKey
+  -PreferencesService _prefs
+  -NavigatorState _navigator
+  +void didChangeAppLifecycleState()
+  +Widget build()
+}
+
+"flutter_generic_app::app.dart::_AppViewState" o-- "flutter::src::widgets::framework.dart::GlobalKey<NavigatorState>"
+"flutter_generic_app::app.dart::_AppViewState" o-- "flutter_generic_app::services::preferences_service.dart::PreferencesService"
+"flutter_generic_app::app.dart::_AppViewState" o-- "flutter::src::widgets::navigator.dart::NavigatorState"
+"flutter::src::widgets::framework.dart::State<T>" <|-- "flutter_generic_app::app.dart::_AppViewState"
+"flutter::src::widgets::binding.dart::WidgetsBindingObserver" <|-- "flutter_generic_app::app.dart::_AppViewState"
+
+class "flutter_generic_app::ui::home::view::home_page.dart::HomePage" {
+  {static} +dynamic routeName()
+  {static} +Route route()
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "flutter_generic_app::ui::home::view::home_page.dart::HomePage"
+
+class "flutter_generic_app::ui::login::bloc::login_bloc.dart::LoginBloc" {
+  -AuthenticationRepository _authenticationRepository
+  +Stream mapEventToState()
+  -LoginState _mapUsernameChangedToState()
+  -LoginState _mapPasswordChangedToState()
+  -Stream _mapLoginSubmittedToState()
+}
+
+"flutter_generic_app::ui::login::bloc::login_bloc.dart::LoginBloc" o-- "authentication_repository::src::authentication_repository.dart::AuthenticationRepository"
+"bloc::src::bloc.dart::Bloc<Event, State>" <|-- "flutter_generic_app::ui::login::bloc::login_bloc.dart::LoginBloc"
+
+abstract class "flutter_generic_app::ui::login::bloc::login_bloc.dart::LoginEvent" {
+  +List<Object> props
+}
+
+"equatable::src::equatable.dart::Equatable" <|-- "flutter_generic_app::ui::login::bloc::login_bloc.dart::LoginEvent"
+
+class "flutter_generic_app::ui::login::bloc::login_bloc.dart::LoginUsernameChanged" {
+  +String username
+  +List<Object> props
+}
+
+"flutter_generic_app::ui::login::bloc::login_bloc.dart::LoginEvent" <|-- "flutter_generic_app::ui::login::bloc::login_bloc.dart::LoginUsernameChanged"
+
+class "flutter_generic_app::ui::login::bloc::login_bloc.dart::LoginPasswordChanged" {
+  +String password
+  +List<Object> props
+}
+
+"flutter_generic_app::ui::login::bloc::login_bloc.dart::LoginEvent" <|-- "flutter_generic_app::ui::login::bloc::login_bloc.dart::LoginPasswordChanged"
+
+class "flutter_generic_app::ui::login::bloc::login_bloc.dart::LoginSubmitted" {
+}
+
+"flutter_generic_app::ui::login::bloc::login_bloc.dart::LoginEvent" <|-- "flutter_generic_app::ui::login::bloc::login_bloc.dart::LoginSubmitted"
+
+class "flutter_generic_app::ui::login::bloc::login_bloc.dart::LoginState" {
+  +dynamic status
+  +Username username
+  +Password password
+  +List<Object> props
+  +LoginState copyWith()
+}
+
+"flutter_generic_app::ui::login::bloc::login_bloc.dart::LoginState" o-- "flutter_generic_app::ui::login::models::username.dart::Username"
+"flutter_generic_app::ui::login::bloc::login_bloc.dart::LoginState" o-- "flutter_generic_app::ui::login::models::password.dart::Password"
+"equatable::src::equatable.dart::Equatable" <|-- "flutter_generic_app::ui::login::bloc::login_bloc.dart::LoginState"
+
+class "flutter_generic_app::ui::login::models::password.dart::PasswordValidationError" {
+  +int index
+  {static} +List<PasswordValidationError> values
+  {static} +PasswordValidationError empty
+}
+
+"flutter_generic_app::ui::login::models::password.dart::PasswordValidationError" o-- "flutter_generic_app::ui::login::models::password.dart::PasswordValidationError"
+
+class "flutter_generic_app::ui::login::models::password.dart::Password" {
+  +PasswordValidationError validator()
+}
+
+"formz::formz.dart::FormzInput<T, E>" <|-- "flutter_generic_app::ui::login::models::password.dart::Password"
+
+class "flutter_generic_app::ui::login::models::username.dart::UsernameValidationError" {
+  +int index
+  {static} +List<UsernameValidationError> values
+  {static} +UsernameValidationError empty
+}
+
+"flutter_generic_app::ui::login::models::username.dart::UsernameValidationError" o-- "flutter_generic_app::ui::login::models::username.dart::UsernameValidationError"
+
+class "flutter_generic_app::ui::login::models::username.dart::Username" {
+  +UsernameValidationError validator()
+}
+
+"formz::formz.dart::FormzInput<T, E>" <|-- "flutter_generic_app::ui::login::models::username.dart::Username"
+
+class "flutter_generic_app::ui::login::view::login_page.dart::LoginPage" {
+  {static} +Route route()
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "flutter_generic_app::ui::login::view::login_page.dart::LoginPage"
+
+class "flutter_generic_app::ui::login::view::login_form.dart::LoginForm" {
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "flutter_generic_app::ui::login::view::login_form.dart::LoginForm"
+
+class "flutter_generic_app::ui::login::view::login_form.dart::_UsernameInput" {
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "flutter_generic_app::ui::login::view::login_form.dart::_UsernameInput"
+
+class "flutter_generic_app::ui::login::view::login_form.dart::_PasswordInput" {
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "flutter_generic_app::ui::login::view::login_form.dart::_PasswordInput"
+
+class "flutter_generic_app::ui::login::view::login_form.dart::_LoginButton" {
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "flutter_generic_app::ui::login::view::login_form.dart::_LoginButton"
+
+class "flutter_generic_app::ui::splash::view::splash_page.dart::SplashPage" {
+  {static} +Route route()
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "flutter_generic_app::ui::splash::view::splash_page.dart::SplashPage"
+
+class "flutter_generic_app::simple_bloc_observer.dart::SimpleBlocObserver" {
+  +void onEvent()
+  +void onError()
+  +void onChange()
+  +void onTransition()
+}
+
+"bloc::src::bloc_observer.dart::BlocObserver" <|-- "flutter_generic_app::simple_bloc_observer.dart::SimpleBlocObserver"
+
+class "flutter_generic_app::services::authentication_service.dart::AuthenticationService" {
+  +Future trackApplicationVersion()
+}
+
+class "flutter_generic_app::services::preferences_service.dart::PreferencesService" {
+}
+
+class "flutter_generic_app::services::analytics_service.dart::Events" {
+  {static} +dynamic appToForeground
+}
+
+class "flutter_generic_app::services::analytics_service.dart::AnalyticsService" {
+  -FirebaseAnalytics _analytics
+  +FirebaseAnalyticsObserver getAnalyticsObserver()
+  +Future setUserProperties()
+  +void track()
+  +Future logLogin()
+  +Future logSignUp()
+  +Future logPostCreated()
+}
+
+"flutter_generic_app::services::analytics_service.dart::AnalyticsService" o-- "firebase_analytics::firebase_analytics.dart::FirebaseAnalytics"
+
+class "flutter_generic_app::services::error_service.dart::ErrorService" {
+  +Future reportError()
+}
+
+class "flutter_generic_app::services::push_notification_service.dart::PushNotificationService" {
+  -FirebaseMessaging _fcm
+  -NavigationService _navigationService
+  +Future initialise()
+  -void _serialiseAndNavigate()
+}
+
+"flutter_generic_app::services::push_notification_service.dart::PushNotificationService" o-- "firebase_messaging::firebase_messaging.dart::FirebaseMessaging"
+"flutter_generic_app::services::push_notification_service.dart::PushNotificationService" o-- "flutter_generic_app::services::navigation_service.dart::NavigationService"
+
+class "flutter_generic_app::services::cloud_storage_service.dart::CloudStorageService" {
+  +Future uploadImage()
+  +Future deleteImage()
+}
+
+class "flutter_generic_app::services::cloud_storage_service.dart::CloudStorageResult" {
+  +String imageUrl
+  +String imageFileName
+}
+
+class "flutter_generic_app::services::dialog_service.dart::DialogService" {
+  -GlobalKey<NavigatorState> _dialogNavigationKey
+  -dynamic Function(DialogRequest) _showDialogListener
+  -Completer<DialogResponse> _dialogCompleter
+  +GlobalKey<NavigatorState> dialogNavigationKey
+  +void registerDialogListener()
+  +Future showDialog()
+  +Future showConfirmationDialog()
+  +void dialogComplete()
+}
+
+"flutter_generic_app::services::dialog_service.dart::DialogService" o-- "flutter::src::widgets::framework.dart::GlobalKey<NavigatorState>"
+"flutter_generic_app::services::dialog_service.dart::DialogService" o-- "flutter_generic_app::services::dialog_service.dart::dynamic Function(DialogRequest)"
+"flutter_generic_app::services::dialog_service.dart::DialogService" o-- "dart::async::Completer<DialogResponse>"
+
+class "flutter_generic_app::services::navigation_service.dart::NavigationService" {
+  -GlobalKey<NavigatorState> _navigationKey
+  +GlobalKey<NavigatorState> navigationKey
+  +void pop()
+  +Future navigateTo()
+}
+
+"flutter_generic_app::services::navigation_service.dart::NavigationService" o-- "flutter::src::widgets::framework.dart::GlobalKey<NavigatorState>"
+
+class "flutter_generic_app::services::dynamic_link_service.dart::DynamicLinkService" {
+  -NavigationService _navigationService
+  +Future handleDynamicLinks()
+  -void _handleDeepLink()
+  +Future createFirstPostLink()
+}
+
+"flutter_generic_app::services::dynamic_link_service.dart::DynamicLinkService" o-- "flutter_generic_app::services::navigation_service.dart::NavigationService"
+
+class "flutter_generic_app::blocs::authentication::bloc::authentication_bloc.dart::AuthenticationBloc" {
+  -AuthenticationRepository _authenticationRepository
+  -StreamSubscription _userSubscription
+  +Stream mapEventToState()
+  +Future close()
+  -AuthenticationState _mapAuthenticationUserChangedToState()
+}
+
+"flutter_generic_app::blocs::authentication::bloc::authentication_bloc.dart::AuthenticationBloc" o-- "authentication_repository::src::authentication_repository.dart::AuthenticationRepository"
+"flutter_generic_app::blocs::authentication::bloc::authentication_bloc.dart::AuthenticationBloc" o-- "dart::async::StreamSubscription"
+"bloc::src::bloc.dart::Bloc<Event, State>" <|-- "flutter_generic_app::blocs::authentication::bloc::authentication_bloc.dart::AuthenticationBloc"
+
+abstract class "flutter_generic_app::blocs::authentication::bloc::authentication_bloc.dart::AuthenticationEvent" {
+  +List<Object> props
+}
+
+"equatable::src::equatable.dart::Equatable" <|-- "flutter_generic_app::blocs::authentication::bloc::authentication_bloc.dart::AuthenticationEvent"
+
+class "flutter_generic_app::blocs::authentication::bloc::authentication_bloc.dart::AuthenticationUserChanged" {
+  +dynamic user
+  +List<Object> props
+}
+
+"flutter_generic_app::blocs::authentication::bloc::authentication_bloc.dart::AuthenticationEvent" <|-- "flutter_generic_app::blocs::authentication::bloc::authentication_bloc.dart::AuthenticationUserChanged"
+
+class "flutter_generic_app::blocs::authentication::bloc::authentication_bloc.dart::AuthenticationLogoutRequested" {
+}
+
+"flutter_generic_app::blocs::authentication::bloc::authentication_bloc.dart::AuthenticationEvent" <|-- "flutter_generic_app::blocs::authentication::bloc::authentication_bloc.dart::AuthenticationLogoutRequested"
+
+class "flutter_generic_app::blocs::authentication::bloc::authentication_bloc.dart::AuthenticationStatus" {
+  +int index
+  {static} +List<AuthenticationStatus> values
+  {static} +AuthenticationStatus authenticated
+  {static} +AuthenticationStatus unauthenticated
+  {static} +AuthenticationStatus unknown
+}
+
+"flutter_generic_app::blocs::authentication::bloc::authentication_bloc.dart::AuthenticationStatus" o-- "flutter_generic_app::blocs::authentication::bloc::authentication_bloc.dart::AuthenticationStatus"
+
+class "flutter_generic_app::blocs::authentication::bloc::authentication_bloc.dart::AuthenticationState" {
+  +AuthenticationStatus status
+  +dynamic user
+  +List<Object> props
+}
+
+"flutter_generic_app::blocs::authentication::bloc::authentication_bloc.dart::AuthenticationState" o-- "flutter_generic_app::blocs::authentication::bloc::authentication_bloc.dart::AuthenticationStatus"
+"equatable::src::equatable.dart::Equatable" <|-- "flutter_generic_app::blocs::authentication::bloc::authentication_bloc.dart::AuthenticationState"
+
+class "flutter_generic_app::api::models::job.dart::Job" {
+  +String id
+  +String title
+  +String locationNames
+  +bool isFeatured
+}
+
+class "flutter_generic_app::api::job_api_client.dart::GetJobsRequestFailure" {
+}
+
+"dart::core::Exception" <|-- "flutter_generic_app::api::job_api_client.dart::GetJobsRequestFailure"
+
+class "flutter_generic_app::api::job_api_client.dart::JobsApiClient" {
+  -GraphQLClient _graphQLClient
+  +Future getJobs()
+}
+
+"flutter_generic_app::api::job_api_client.dart::JobsApiClient" o-- "graphql::src::graphql_client.dart::GraphQLClient"
+
+
+@enduml
