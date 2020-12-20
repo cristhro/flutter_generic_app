@@ -27,22 +27,27 @@ dependencies:
     path: packages/authentication_repository
   user_repository:
     path: packages/user_repository
+  adjust_sdk: ^4.23.3
   cupertino_icons: ^1.0.0
   equatable: ^1.2.5
+  firebase_messaging: ^7.0.3
   flutter_bloc: ^6.1.0
   formz: ^0.3.1
+  geolocator: ^6.1.13
+  get_it: ^5.0.3
   google_fonts: ^1.1.0
   graphql: ^3.0.2
   meta: ^1.1.8
   pedantic: ^1.9.0
+  shared_preferences: ^0.5.12+4
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   bloc_test: ^7.1.0
   build_runner: ^1.8.1
-  mockito: ^4.0.0
   lint: ^1.0.0
+  mockito: ^4.0.0
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 # The following section is specific to Flutter.

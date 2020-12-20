@@ -1,11 +1,19 @@
 # This is a generated file; do not edit or check into version control.
+adjust_sdk=/home/elit/.pub-cache/hosted/pub.dartlang.org/adjust_sdk-4.23.3/
 firebase_auth=/home/elit/.pub-cache/hosted/pub.dartlang.org/firebase_auth-0.18.4+1/
 firebase_auth_web=/home/elit/.pub-cache/hosted/pub.dartlang.org/firebase_auth_web-0.3.2+3/
 firebase_core=/home/elit/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.5.3/
 firebase_core_web=/home/elit/.pub-cache/hosted/pub.dartlang.org/firebase_core_web-0.2.1+1/
+firebase_messaging=/home/elit/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-7.0.3/
+geolocator=/home/elit/.pub-cache/hosted/pub.dartlang.org/geolocator-6.1.13/
 google_sign_in=/home/elit/.pub-cache/hosted/pub.dartlang.org/google_sign_in-4.5.6/
 google_sign_in_web=/home/elit/.pub-cache/hosted/pub.dartlang.org/google_sign_in_web-0.9.2/
 path_provider=/home/elit/.pub-cache/hosted/pub.dartlang.org/path_provider-1.6.24/
 path_provider_linux=/home/elit/.pub-cache/hosted/pub.dartlang.org/path_provider_linux-0.0.1+2/
 path_provider_macos=/home/elit/.pub-cache/hosted/pub.dartlang.org/path_provider_macos-0.0.4+6/
 path_provider_windows=/home/elit/.pub-cache/hosted/pub.dartlang.org/path_provider_windows-0.0.4+3/
+shared_preferences=/home/elit/.pub-cache/hosted/pub.dartlang.org/shared_preferences-0.5.12+4/
+shared_preferences_linux=/home/elit/.pub-cache/hosted/pub.dartlang.org/shared_preferences_linux-0.0.2+4/
+shared_preferences_macos=/home/elit/.pub-cache/hosted/pub.dartlang.org/shared_preferences_macos-0.0.1+11/
+shared_preferences_web=/home/elit/.pub-cache/hosted/pub.dartlang.org/shared_preferences_web-0.1.2+7/
+shared_preferences_windows=/home/elit/.pub-cache/hosted/pub.dartlang.org/shared_preferences_windows-0.0.1+3/

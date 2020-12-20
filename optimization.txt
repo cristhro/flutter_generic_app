@@ -22,3 +22,6 @@ TODO: DO IT!
 
 TODO: NOOO DO IT!
     1. Dont rebuild widgets that you dont nedd to and stuff like that
+
+Libs
+    1. flutter_cache_manager

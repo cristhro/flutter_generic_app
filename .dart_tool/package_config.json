@@ -8,6 +8,12 @@
       "languageVersion": "2.2"
     },
     {
+      "name": "adjust_sdk",
+      "rootUri": "file:///home/elit/.pub-cache/hosted/pub.dartlang.org/adjust_sdk-4.23.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
+    },
+    {
       "name": "analyzer",
       "rootUri": "file:///home/elit/.pub-cache/hosted/pub.dartlang.org/analyzer-0.40.6",
       "packageUri": "lib/",
@@ -230,6 +236,12 @@
       "languageVersion": "2.1"
     },
     {
+      "name": "firebase_messaging",
+      "rootUri": "file:///home/elit/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-7.0.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
+    },
+    {
       "name": "fixnum",
       "rootUri": "file:///home/elit/.pub-cache/hosted/pub.dartlang.org/fixnum-0.10.11",
       "packageUri": "lib/",
@@ -264,6 +276,24 @@
       "rootUri": "file:///home/elit/.pub-cache/hosted/pub.dartlang.org/formz-0.3.2",
       "packageUri": "lib/",
       "languageVersion": "2.7"
+    },
+    {
+      "name": "geolocator",
+      "rootUri": "file:///home/elit/.pub-cache/hosted/pub.dartlang.org/geolocator-6.1.13",
+      "packageUri": "lib/",
+      "languageVersion": "2.7"
+    },
+    {
+      "name": "geolocator_platform_interface",
+      "rootUri": "file:///home/elit/.pub-cache/hosted/pub.dartlang.org/geolocator_platform_interface-1.0.8",
+      "packageUri": "lib/",
+      "languageVersion": "2.7"
+    },
+    {
+      "name": "get_it",
+      "rootUri": "file:///home/elit/.pub-cache/hosted/pub.dartlang.org/get_it-5.0.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.1"
     },
     {
       "name": "glob",
@@ -518,6 +548,42 @@
       "languageVersion": "2.6"
     },
     {
+      "name": "shared_preferences",
+      "rootUri": "file:///home/elit/.pub-cache/hosted/pub.dartlang.org/shared_preferences-0.5.12+4",
+      "packageUri": "lib/",
+      "languageVersion": "2.1"
+    },
+    {
+      "name": "shared_preferences_linux",
+      "rootUri": "file:///home/elit/.pub-cache/hosted/pub.dartlang.org/shared_preferences_linux-0.0.2+4",
+      "packageUri": "lib/",
+      "languageVersion": "2.1"
+    },
+    {
+      "name": "shared_preferences_macos",
+      "rootUri": "file:///home/elit/.pub-cache/hosted/pub.dartlang.org/shared_preferences_macos-0.0.1+11",
+      "packageUri": "lib/",
+      "languageVersion": "2.1"
+    },
+    {
+      "name": "shared_preferences_platform_interface",
+      "rootUri": "file:///home/elit/.pub-cache/hosted/pub.dartlang.org/shared_preferences_platform_interface-1.0.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.1"
+    },
+    {
+      "name": "shared_preferences_web",
+      "rootUri": "file:///home/elit/.pub-cache/hosted/pub.dartlang.org/shared_preferences_web-0.1.2+7",
+      "packageUri": "lib/",
+      "languageVersion": "2.1"
+    },
+    {
+      "name": "shared_preferences_windows",
+      "rootUri": "file:///home/elit/.pub-cache/hosted/pub.dartlang.org/shared_preferences_windows-0.0.1+3",
+      "packageUri": "lib/",
+      "languageVersion": "2.1"
+    },
+    {
       "name": "shelf",
       "rootUri": "file:///home/elit/.pub-cache/hosted/pub.dartlang.org/shelf-0.7.9",
       "packageUri": "lib/",
@@ -710,7 +776,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2020-12-19T11:17:46.620485Z",
+  "generated": "2020-12-20T01:48:09.096773Z",
   "generator": "pub",
   "generatorVersion": "2.10.4"
 }
