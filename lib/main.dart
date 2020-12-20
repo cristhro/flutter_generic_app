@@ -20,13 +20,12 @@ Future<void> main() async {
 
   final ErrorService _errorService = ErrorService();
   final AuthenticationService _authServ = locator<AuthenticationService>();
-  final AnalyticsService _analyticsServ = locator<AnalyticsService>();
+  //TODO:### final AnalyticsService _analyticsServ = locator<AnalyticsService>();
   
   disableErrorWidget();
 
   await disableLandscapeMode();
   // await locator<AuthenticationService>().tryLoadSession();
-  _analyticsServ.identify();
   await _authServ.trackApplicationVersion();
   await Firebase.initializeApp();
 

@@ -1,0 +1,10 @@
+
+Setup: Crashlytics for ios
+    iOS
+    From Xcode select Runner from the project navigation.
+    Select the Build Phases tab, then click + > New Run Script Phase.
+    Add ${PODS_ROOT}/FirebaseCrashlytics/run to the Type a script... text box.
+    Optionally you can also provide your app's built Info.plist location to the build phase's Input Files field: For example: $(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)
+
+Setup: analytics
+Setup: remote_config

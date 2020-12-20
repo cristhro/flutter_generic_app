@@ -42,7 +42,7 @@ class AppView extends StatefulWidget {
 class _AppViewState extends State<AppView> with WidgetsBindingObserver {
   final _navigatorKey = GlobalKey<NavigatorState>();
   final _prefs = locator<PreferencesService>();
-  final _analyticsSrv = locator<AnalyticsService>();
+  // TODO:### final _analyticsSrv = locator<AnalyticsService>();
 
   // ThemeData theme;
   // ThemeData darkTheme;
@@ -54,7 +54,7 @@ class _AppViewState extends State<AppView> with WidgetsBindingObserver {
       switch (state) {
         case AppLifecycleState.resumed:
           Adjust.onResume();
-          _analyticsSrv.track(Events.appToForeground);
+          // TODO:### _analyticsSrv.track(Events.appToForeground);
           break;
         case AppLifecycleState.inactive:
           // TODO: Handle this case.

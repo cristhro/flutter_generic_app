@@ -1,4 +1,5 @@
 class ErrorService {
-  void reportError(dynamic error, dynamic stackTrace) {}
-
+  Future<void> reportError(dynamic error, dynamic stackTrace) {
+    print('Error: $error');
+  }
 }

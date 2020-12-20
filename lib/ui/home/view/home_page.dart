@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_generic_app/blocs/authentication/authentication.dart';
 
 class HomePage extends StatelessWidget {
+  static String routeName () => 'HomePage';
   static Route route() {
     return MaterialPageRoute<void>(builder: (_) => HomePage());
   }
