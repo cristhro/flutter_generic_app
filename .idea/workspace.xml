@@ -1,79 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:feature" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:feature" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:feature/woocomerce-api" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="b9978cfd-75a8-4817-a1af-9837521877d0" name="Default Changelist" comment="Added repository authentication and user repository">
-      <change afterPath="$PROJECT_DIR$/.flutter-plugins" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.packages" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/android/app/google-services.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ios/Runner/GoogleService-Info.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/api/api.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/api/job_api_client.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/api/models/job.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/api/models/job.g.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/api/models/models.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/api/queries/get_jobs.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/api/queries/queries.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/app.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/authentication/authentication.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/authentication/bloc/authentication_bloc.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/authentication/bloc/authentication_event.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/authentication/bloc/authentication_state.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/home/home.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/home/view/home_page.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/login/bloc/login_bloc.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/login/bloc/login_event.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/login/bloc/login_state.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/login/login.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/login/models/models.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/login/models/password.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/login/models/username.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/login/view/login_form.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/login/view/login_page.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/login/view/view.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/simple_bloc_observer.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/splash/splash.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/splash/view/splash_page.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/authentication_repository/.flutter-plugins" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/authentication_repository/.flutter-plugins-dependencies" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/authentication_repository/.idea/authentication_repository.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/authentication_repository/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/authentication_repository/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/authentication_repository/.packages" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/authentication_repository/analysis_options.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/authentication_repository/lib/authentication_repository.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/authentication_repository/lib/src/authentication_repository.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/authentication_repository/lib/src/models/models.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/authentication_repository/lib/src/models/user.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/authentication_repository/lib/test/authentication_repository_test.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/authentication_repository/lib/test/models/user_test.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/authentication_repository/pubspec.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/authentication_repository/pubspec.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/user_repository/.dart_tool/package_config.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/user_repository/.packages" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/user_repository/lib/src/models/models.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/user_repository/lib/src/models/user.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/user_repository/lib/src/user_repository.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/user_repository/lib/user_repository.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/user_repository/pubspec.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/user_repository/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/flutter_generic_app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/flutter_generic_app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/woocomerce_repository/.dart_tool/package_config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/woocomerce_repository/.packages" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/woocomerce_repository/lib/src/models/models.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/woocomerce_repository/lib/src/models/user.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/woocomerce_repository/lib/src/user_repository.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/woocomerce_repository/lib/user_repository.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/woocomerce_repository/pubspec.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/woocomerce_repository/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/debug/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/kotlin/com/example/flutter_generic_app/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/kotlin/com/example/flutter_generic_app/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/profile/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/profile/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/android/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_generic_app/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_generic_app/.metadata" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/AppDelegate.swift" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/AppDelegate.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/widget_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/widget_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/.packages" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +52,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1lr9QRj57MA2QO6gdW9JjuhmMKK" />
@@ -98,21 +74,35 @@
     <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/packages/authentication_repository" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/packages" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/packages/authentication_repository" />
       <recent name="$PROJECT_DIR$/packages/authentication_repository/lib" />
       <recent name="$PROJECT_DIR$/packages/authentication_repository/lib/src" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Flutter Test.Counter increments smoke test">
     <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
       <option name="filePath" value="$PROJECT_DIR$/lib/main.dart" />
       <method v="2" />
     </configuration>
+    <configuration name="Counter increments smoke test" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="Counter increments smoke test" />
+      <option name="testFile" value="$PROJECT_DIR$/test/widget_test.dart" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Flutter Test.Counter increments smoke test" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -125,6 +115,14 @@
       <option name="presentableId" value="Default" />
       <updated>1608344326367</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added repository authentication and user repository">
+      <created>1608353016763</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1608353016763</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -138,7 +136,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="main" />
+                        <option value="feature/woocomerce-api" />
                       </list>
                     </value>
                   </entry>
@@ -149,6 +147,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -156,25 +155,41 @@
     <option name="LAST_COMMIT_MESSAGE" value="Added repository authentication and user repository" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1999" y="509" width="912" height="908" key="CommitChangelistDialog2" timestamp="1608353016610">
+      <screen x="1920" y="0" width="1080" height="1920" />
+    </state>
+    <state x="1999" y="509" width="912" height="908" key="CommitChangelistDialog2/64.27.1856.1053/1920.0.1080.1920@1920.0.1080.1920" timestamp="1608353016610" />
     <state x="2243" y="718" width="424" height="491" key="FileChooserDialogImpl" timestamp="1608349669971">
       <screen x="1920" y="0" width="1080" height="1920" />
     </state>
     <state x="2243" y="718" width="424" height="491" key="FileChooserDialogImpl/64.27.1856.1053/1920.0.1080.1920@1920.0.1080.1920" timestamp="1608349669971" />
-    <state width="1034" height="940" key="GridCell.Tab.0.bottom" timestamp="1608352694089">
+    <state width="1034" height="938" key="GridCell.Tab.0.bottom" timestamp="1608375962352">
       <screen x="1920" y="0" width="1080" height="1920" />
     </state>
-    <state width="1034" height="940" key="GridCell.Tab.0.bottom/64.27.1856.1053/1920.0.1080.1920@1920.0.1080.1920" timestamp="1608352694089" />
-    <state width="1034" height="940" key="GridCell.Tab.0.center" timestamp="1608352694089">
+    <state width="1034" height="938" key="GridCell.Tab.0.bottom/64.27.1856.1053/1920.0.1080.1920@1920.0.1080.1920" timestamp="1608375962352" />
+    <state width="1034" height="938" key="GridCell.Tab.0.center" timestamp="1608375962351">
       <screen x="1920" y="0" width="1080" height="1920" />
     </state>
-    <state width="1034" height="940" key="GridCell.Tab.0.center/64.27.1856.1053/1920.0.1080.1920@1920.0.1080.1920" timestamp="1608352694089" />
-    <state width="1034" height="940" key="GridCell.Tab.0.left" timestamp="1608352694089">
+    <state width="1034" height="938" key="GridCell.Tab.0.center/64.27.1856.1053/1920.0.1080.1920@1920.0.1080.1920" timestamp="1608375962351" />
+    <state width="1034" height="938" key="GridCell.Tab.0.left" timestamp="1608375962351">
       <screen x="1920" y="0" width="1080" height="1920" />
     </state>
-    <state width="1034" height="940" key="GridCell.Tab.0.left/64.27.1856.1053/1920.0.1080.1920@1920.0.1080.1920" timestamp="1608352694089" />
-    <state width="1034" height="940" key="GridCell.Tab.0.right" timestamp="1608352694089">
+    <state width="1034" height="938" key="GridCell.Tab.0.left/64.27.1856.1053/1920.0.1080.1920@1920.0.1080.1920" timestamp="1608375962351" />
+    <state width="1034" height="938" key="GridCell.Tab.0.right" timestamp="1608375962351">
       <screen x="1920" y="0" width="1080" height="1920" />
     </state>
-    <state width="1034" height="940" key="GridCell.Tab.0.right/64.27.1856.1053/1920.0.1080.1920@1920.0.1080.1920" timestamp="1608352694089" />
+    <state width="1034" height="938" key="GridCell.Tab.0.right/64.27.1856.1053/1920.0.1080.1920@1920.0.1080.1920" timestamp="1608375962351" />
+    <state x="1949" y="95" width="1022" height="1173" key="SettingsEditor" timestamp="1608375960408">
+      <screen x="1920" y="0" width="1080" height="1920" />
+    </state>
+    <state x="1949" y="95" width="1022" height="1173" key="SettingsEditor/64.27.1856.1053/1920.0.1080.1920@1920.0.1080.1920" timestamp="1608375960408" />
+    <state x="2055" y="682" width="800" height="563" key="Vcs.Push.Dialog.v2" timestamp="1608353020008">
+      <screen x="1920" y="0" width="1080" height="1920" />
+    </state>
+    <state x="2055" y="682" width="800" height="563" key="Vcs.Push.Dialog.v2/64.27.1856.1053/1920.0.1080.1920@1920.0.1080.1920" timestamp="1608353020008" />
+    <state x="2123" y="449" width="672" height="678" key="search.everywhere.popup" timestamp="1608352815600">
+      <screen x="1920" y="0" width="1080" height="1920" />
+    </state>
+    <state x="2123" y="449" width="672" height="678" key="search.everywhere.popup/64.27.1856.1053/1920.0.1080.1920@1920.0.1080.1920" timestamp="1608352815600" />
   </component>
 </project>

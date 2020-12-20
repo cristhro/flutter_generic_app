@@ -1,11 +1,15 @@
+import 'package:adjust_sdk/adjust.dart';
 import 'package:authentication_repository/authentication_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_generic_app/authentication/authentication.dart';
-import 'package:flutter_generic_app/home/home.dart';
-import 'package:flutter_generic_app/login/login.dart';
-import 'package:flutter_generic_app/splash/splash.dart';
+import 'package:flutter_generic_app/services/services.dart';
 import 'package:flutter_generic_app/theme.dart';
+import 'package:flutter_generic_app/ui/home/home.dart';
+import 'package:flutter_generic_app/ui/login/login.dart';
+import 'package:flutter_generic_app/ui/splash/splash.dart';
+
+import 'blocs/authentication/authentication.dart';
+import 'locator.dart';
 
 class App extends StatelessWidget {
   const App({
@@ -35,10 +39,36 @@ class AppView extends StatefulWidget {
   _AppViewState createState() => _AppViewState();
 }
 
-class _AppViewState extends State<AppView> {
+class _AppViewState extends State<AppView> with WidgetsBindingObserver {
   final _navigatorKey = GlobalKey<NavigatorState>();
+  final _prefs = locator<PreferencesService>();
+  // TODO:### final _analyticsSrv = locator<AnalyticsService>();
 
+  // ThemeData theme;
+  // ThemeData darkTheme;
   NavigatorState get _navigator => _navigatorKey.currentState;
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    setState(() {
+      switch (state) {
+        case AppLifecycleState.resumed:
+          Adjust.onResume();
+          // TODO:### _analyticsSrv.track(Events.appToForeground);
+          break;
+        case AppLifecycleState.inactive:
+          // TODO: Handle this case.
+          break;
+        case AppLifecycleState.paused:
+          Adjust.onPause();
+          break;
+        case AppLifecycleState.detached:
+          // TODO: Handle this case.
+          break;
+      }
+    });
+  }
+
 
   @override
   Widget build(BuildContext context) {

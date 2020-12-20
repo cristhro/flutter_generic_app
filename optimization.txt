@@ -1,0 +1,27 @@
+https://www.youtube.com/watch?v=vVg9It7cOfY
+Jank: visual stater
+UI thread: UI Theread, GPU thread, 
+Tracing: how much tim takce
+    myComputation( ){
+        Timeline.startSync('myComputation');
+        // actuali work
+        Timeline.finishSync(;)
+    }
+Flame chart: timeline of events
+Trade-off: 
+Caveats:
+
+TODO: DO IT!
+
+    1. profile mode
+    2. do in a real device
+    3. run flutter run --profile --trace-skia
+    4. press P for show Chart Line
+    5. press s 
+    6. User awawit compute(_functionCompute, Params)
+
+TODO: NOOO DO IT!
+    1. Dont rebuild widgets that you dont nedd to and stuff like that
+
+Libs
+    1. flutter_cache_manager

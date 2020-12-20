@@ -1,0 +1,20 @@
+#Flutter
+package: dcdg 2.0.1 
+
+Installation 
+Install from pub:
+
+flutter pub global activate dcdg
+
+Usage
+flutter pub global run dcdg
+
+
+#Java
+Installation
+Lib: plantuml https://plantuml.com/es/starting
+Lib: https://plantuml.com/es/graphviz-dot
+
+Usage 
+java -jar plantuml.jar uml_output.txt
+java -DPLANTUML_LIMIT_SIZE=8192 -jar uml_output.txt
