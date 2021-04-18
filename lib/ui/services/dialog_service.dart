@@ -1,8 +1,10 @@
 import 'dart:async';
 
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_generic_app/domain/models/dialog_models.dart';
+import 'package:flutter_generic_app/domain/entities/index.dart';
+import 'package:injectable/injectable.dart';
 
+@singleton
 class DialogService {
   final GlobalKey<NavigatorState> _dialogNavigationKey = GlobalKey<NavigatorState>();
   // ignore: use_late_for_private_fields_and_variables
@@ -33,16 +35,9 @@ class DialogService {
 
   /// Shows a confirmation dialog
   Future<DialogResponse>? showConfirmationDialog(
-      { required String title,
-        required String description,
-      String confirmationTitle = 'Ok',
-      String cancelTitle = 'Cancel'}) {
+      {required String title, required String description, String confirmationTitle = 'Ok', String cancelTitle = 'Cancel'}) {
     _dialogCompleter = Completer<DialogResponse>();
-    _showDialogListener!(DialogRequest(
-        title: title,
-        description: description,
-        buttonTitle: confirmationTitle,
-        cancelTitle: cancelTitle));
+    _showDialogListener!(DialogRequest(title: title, description: description, buttonTitle: confirmationTitle, cancelTitle: cancelTitle));
     return _dialogCompleter?.future;
   }
 

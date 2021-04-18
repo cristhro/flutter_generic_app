@@ -5,7 +5,9 @@ import 'package:flutter_generic_app/di/injection.dart';
 import 'package:flutter_generic_app/domain/services/index.dart';
 import 'package:flutter_generic_app/ui/pages/home/home_page.dart';
 import 'package:flutter_generic_app/ui/services/navigation_service.dart';
+import 'package:injectable/injectable.dart';
 
+@injectable
 class DynamicLinkService implements IDynamicLinkService {
   final NavigationService _navigationService = getIt<NavigationService>();
 
@@ -23,8 +25,6 @@ class DynamicLinkService implements IDynamicLinkService {
       // handle link that has been retrieved
       _handleDeepLink(dynamicLink);
     }, onError: (OnLinkErrorException e) async {
-      // ignore: avoid_print
-    // ignore: avoid_print
       developer.log('Link Failed: ${e.message}');
     });
   }
@@ -32,9 +32,7 @@ class DynamicLinkService implements IDynamicLinkService {
   void _handleDeepLink(PendingDynamicLinkData? data) {
     final Uri? deepLink = data?.link;
     if (deepLink != null) {
-      // ignore: avoid_print
       developer.log('_handleDeepLink | deeplink: $deepLink');
-
       final isPost = deepLink.pathSegments.contains('post');
       if (isPost) {
         final title = deepLink.queryParameters['title'];

@@ -3,7 +3,8 @@ import 'dart:io';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter_generic_app/di/injection.dart';
 import 'package:flutter_generic_app/domain/services/index.dart';
-
+import 'package:injectable/injectable.dart';
+@injectable
 class FirebaseStorageService implements IStorageService {
   @override
   Future<StorageResult?> uploadImage({

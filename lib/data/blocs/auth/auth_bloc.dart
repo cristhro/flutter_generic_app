@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:flutter_generic_app/domain/models/user.dart';
+import 'package:flutter_generic_app/domain/entities/index.dart';
 import 'package:flutter_generic_app/domain/respositories/i_auth_repository.dart';
 import 'package:pedantic/pedantic.dart';
 

@@ -9,10 +9,4 @@ final getIt = GetIt.instance;
   preferRelativeImports: true, // default
   asExtension: false, // default
 )
-void configureInjection(String enviroment) => $initGetIt(getIt, environment: enviroment);
-
-abstract class Env {
-  static const test = 'test';
-  static const dev = 'dev';
-  static const prod = 'prod';
-}
+void configureInjection(String enviroment) => $initGetIt(getIt, environment: Environment.dev);

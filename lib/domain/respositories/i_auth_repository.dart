@@ -1,4 +1,4 @@
-import 'package:flutter_generic_app/domain/models/user.dart';
+import 'package:flutter_generic_app/domain/entities/user.dart';
 import 'package:injectable/injectable.dart';
 
 @injectable

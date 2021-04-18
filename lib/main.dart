@@ -10,6 +10,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_generic_app/app/app_bloc_observer.dart';
 import 'package:flutter_generic_app/di/injection.dart';
 import 'package:flutter_generic_app/ui/services/index.dart';
+import 'package:injectable/injectable.dart';
 
 import 'app/app.dart';
 import 'data/repositories/auth_repository.dart';
@@ -18,7 +19,7 @@ import 'data/services/error_service.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  configureInjection(Env.prod);
+  configureInjection(Environment.prod);
 
   final ErrorService _errorService = ErrorService();
   // final AuthService _authServ = locator<AuthService>();
@@ -40,7 +41,6 @@ Future<void> main() async {
   };
 
   runZoned<Future<void>>(() async {
-    configureInjection(Env.prod);
     runApp(App(authenticationRepository: AuthRepository()));
     EquatableConfig.stringify = kDebugMode;
     Bloc.observer = AppBlocObserver();

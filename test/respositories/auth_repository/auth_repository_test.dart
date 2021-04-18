@@ -2,7 +2,7 @@ import 'package:firebase_core_platform_interface/firebase_core_platform_interfac
 import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_generic_app/data/repositories/auth_repository.dart';
-import 'package:flutter_generic_app/domain/models/user.dart';
+import 'package:flutter_generic_app/domain/entities/index.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:mockito/mockito.dart';
