@@ -20,22 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9978cfd-75a8-4817-a1af-9837521877d0" name="Default Changelist" comment="Added repository authentication and user repository">
-      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/.packages" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app.apk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app.apk.sha1" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app.apk.sha1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Podfile" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Podfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner.xcworkspace/contents.xcworkspacedata" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner.xcworkspace/contents.xcworkspacedata" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/AppDelegate.swift" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/AppDelegate.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Info.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/app/app.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/app.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/data/blocs/login/login_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/blocs/login/login_bloc.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/data/services/firebase_analytics_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/services/firebase_analytics_service.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/domain/entities/dialog_models.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/domain/entities/dialog_models.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ui/theme.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/theme.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,26 +158,30 @@
     <option name="LAST_COMMIT_MESSAGE" value="Added repository authentication and user repository" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="275" y="104" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1618867651602">
+      <screen x="0" y="25" width="1440" height="819" />
+    </state>
+    <state x="275" y="104" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1440.819@0.25.1440.819" timestamp="1618867651602" />
     <state x="458" y="185" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1618759265357">
       <screen x="0" y="25" width="1440" height="819" />
     </state>
     <state x="458" y="185" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.1440.819@0.25.1440.819" timestamp="1618759265357" />
-    <state width="1398" height="198" key="GridCell.Tab.0.bottom" timestamp="1618866284635">
+    <state width="1398" height="172" key="GridCell.Tab.0.bottom" timestamp="1618868062519">
       <screen x="0" y="25" width="1440" height="819" />
     </state>
-    <state width="1398" height="198" key="GridCell.Tab.0.bottom/0.25.1440.819@0.25.1440.819" timestamp="1618866284635" />
-    <state width="1398" height="198" key="GridCell.Tab.0.center" timestamp="1618866284635">
+    <state width="1398" height="172" key="GridCell.Tab.0.bottom/0.25.1440.819@0.25.1440.819" timestamp="1618868062519" />
+    <state width="1398" height="172" key="GridCell.Tab.0.center" timestamp="1618868062516">
       <screen x="0" y="25" width="1440" height="819" />
     </state>
-    <state width="1398" height="198" key="GridCell.Tab.0.center/0.25.1440.819@0.25.1440.819" timestamp="1618866284635" />
-    <state width="1398" height="198" key="GridCell.Tab.0.left" timestamp="1618866284634">
+    <state width="1398" height="172" key="GridCell.Tab.0.center/0.25.1440.819@0.25.1440.819" timestamp="1618868062516" />
+    <state width="1398" height="172" key="GridCell.Tab.0.left" timestamp="1618868062515">
       <screen x="0" y="25" width="1440" height="819" />
     </state>
-    <state width="1398" height="198" key="GridCell.Tab.0.left/0.25.1440.819@0.25.1440.819" timestamp="1618866284634" />
-    <state width="1398" height="198" key="GridCell.Tab.0.right" timestamp="1618866284635">
+    <state width="1398" height="172" key="GridCell.Tab.0.left/0.25.1440.819@0.25.1440.819" timestamp="1618868062515" />
+    <state width="1398" height="172" key="GridCell.Tab.0.right" timestamp="1618868062518">
       <screen x="0" y="25" width="1440" height="819" />
     </state>
-    <state width="1398" height="198" key="GridCell.Tab.0.right/0.25.1440.819@0.25.1440.819" timestamp="1618866284635" />
+    <state width="1398" height="172" key="GridCell.Tab.0.right/0.25.1440.819@0.25.1440.819" timestamp="1618868062518" />
     <state x="221" y="70" key="SettingsEditor" timestamp="1618748074395">
       <screen x="0" y="25" width="1440" height="819" />
     </state>
