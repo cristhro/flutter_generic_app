@@ -4,6 +4,7 @@ import 'package:flutter_generic_app/data/blocs/auth/index.dart';
 import 'package:flutter_generic_app/data/repositories/auth_repository.dart';
 import 'package:flutter_generic_app/di/injection.dart';
 import 'package:flutter_generic_app/domain/services/index.dart';
+import 'package:flutter_generic_app/ui/services/index.dart';
 import 'package:flutter_generic_app/ui/theme.dart';
 import 'package:flutter_generic_app/ui/pages/home/home_page.dart';
 import 'package:flutter_generic_app/ui/pages/login/login_page.dart';
@@ -38,7 +39,7 @@ class AppView extends StatefulWidget {
 
 class _AppViewState extends State<AppView> with WidgetsBindingObserver {
   final _navigatorKey = GlobalKey<NavigatorState>();
-  final _analyticsSrv = getIt<IAnalyticsService>();
+  final _analyticsSrv = getIt<FirebaseAnalyticsService>();
 
   // ThemeData theme;
   // ThemeData darkTheme;

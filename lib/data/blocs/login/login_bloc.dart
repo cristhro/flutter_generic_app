@@ -2,6 +2,8 @@ import 'dart:async';
 
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
+import 'package:flutter_generic_app/data/services/firebase_analytics_service.dart';
+import 'package:flutter_generic_app/di/injection.dart';
 import 'package:flutter_generic_app/domain/respositories/i_auth_repository.dart';
 import 'package:flutter_generic_app/ui/pages/login/models/models.dart';
 import 'package:flutter_generic_app/ui/pages/login/models/username.dart';
@@ -64,6 +66,7 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
           email: state.username.value,
           password: state.password.value,
         );
+        getIt<FirebaseAnalyticsService>().logLogin();
         yield state.copyWith(status: FormzStatus.submissionSuccess);
       } on Exception catch (_) {
         yield state.copyWith(status: FormzStatus.submissionFailure);
