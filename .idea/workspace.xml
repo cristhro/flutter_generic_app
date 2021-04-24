@@ -19,11 +19,22 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b9978cfd-75a8-4817-a1af-9837521877d0" name="Default Changelist" comment="Added repository authentication and user repository">
+    <list default="true" id="b9978cfd-75a8-4817-a1af-9837521877d0" name="Default Changelist" comment="Added Crashlytics with flutter for android">
+      <change afterPath="$PROJECT_DIR$/lib/data/services/firebase_crashlytics_service.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/domain/services/i_crashlytics_service.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui/theme.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/theme.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/.packages" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app.apk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app.apk.sha1" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app.apk.sha1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/di/injection.config.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/di/injection.config.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ui/pages/login/login_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/pages/login/login_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/optimization.txt" beforeDir="false" afterPath="$PROJECT_DIR$/optimization.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,21 +79,22 @@
     <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/domain/services" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/data/services" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/lib/domain/services" />
-      <recent name="$PROJECT_DIR$/packages" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/lib/ui/pages" />
       <recent name="$PROJECT_DIR$/lib/data/services" />
       <recent name="$PROJECT_DIR$/test/respositories/auth_repository" />
       <recent name="$PROJECT_DIR$/lib/data/repositories" />
       <recent name="$PROJECT_DIR$/lib/domain/models" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/data/services" />
+      <recent name="$PROJECT_DIR$/lib/domain/services" />
+      <recent name="$PROJECT_DIR$/packages" />
     </key>
   </component>
   <component name="RunManager" selected="Flutter.main.dart">
@@ -155,7 +167,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Added repository authentication and user repository" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added repository authentication and user repository" />
+    <MESSAGE value="Added Crashlytics with flutter for android" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Crashlytics with flutter for android" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="104" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1618867651602">
@@ -166,22 +179,30 @@
       <screen x="0" y="25" width="1440" height="819" />
     </state>
     <state x="458" y="185" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.1440.819@0.25.1440.819" timestamp="1618759265357" />
-    <state width="1398" height="172" key="GridCell.Tab.0.bottom" timestamp="1618868062519">
-      <screen x="0" y="25" width="1440" height="819" />
+    <state x="531" y="103" width="912" height="908" key="CommitChangelistDialog2" timestamp="1619294092751">
+      <screen x="64" y="27" width="1856" height="1053" />
+    </state>
+    <state x="531" y="103" width="912" height="908" key="CommitChangelistDialog2/64.27.1856.1053/1920.0.1920.1080@64.27.1856.1053" timestamp="1619294092751" />
+    <state width="1810" height="407" key="GridCell.Tab.0.bottom" timestamp="1619294092908">
+      <screen x="64" y="27" width="1856" height="1053" />
     </state>
     <state width="1398" height="172" key="GridCell.Tab.0.bottom/0.25.1440.819@0.25.1440.819" timestamp="1618868062519" />
-    <state width="1398" height="172" key="GridCell.Tab.0.center" timestamp="1618868062516">
-      <screen x="0" y="25" width="1440" height="819" />
+    <state width="1810" height="407" key="GridCell.Tab.0.bottom/64.27.1856.1053/1920.0.1920.1080@64.27.1856.1053" timestamp="1619294092908" />
+    <state width="1810" height="407" key="GridCell.Tab.0.center" timestamp="1619294092908">
+      <screen x="64" y="27" width="1856" height="1053" />
     </state>
     <state width="1398" height="172" key="GridCell.Tab.0.center/0.25.1440.819@0.25.1440.819" timestamp="1618868062516" />
-    <state width="1398" height="172" key="GridCell.Tab.0.left" timestamp="1618868062515">
-      <screen x="0" y="25" width="1440" height="819" />
+    <state width="1810" height="407" key="GridCell.Tab.0.center/64.27.1856.1053/1920.0.1920.1080@64.27.1856.1053" timestamp="1619294092908" />
+    <state width="1810" height="407" key="GridCell.Tab.0.left" timestamp="1619294092908">
+      <screen x="64" y="27" width="1856" height="1053" />
     </state>
     <state width="1398" height="172" key="GridCell.Tab.0.left/0.25.1440.819@0.25.1440.819" timestamp="1618868062515" />
-    <state width="1398" height="172" key="GridCell.Tab.0.right" timestamp="1618868062518">
-      <screen x="0" y="25" width="1440" height="819" />
+    <state width="1810" height="407" key="GridCell.Tab.0.left/64.27.1856.1053/1920.0.1920.1080@64.27.1856.1053" timestamp="1619294092908" />
+    <state width="1810" height="407" key="GridCell.Tab.0.right" timestamp="1619294092908">
+      <screen x="64" y="27" width="1856" height="1053" />
     </state>
     <state width="1398" height="172" key="GridCell.Tab.0.right/0.25.1440.819@0.25.1440.819" timestamp="1618868062518" />
+    <state width="1810" height="407" key="GridCell.Tab.0.right/64.27.1856.1053/1920.0.1920.1080@64.27.1856.1053" timestamp="1619294092908" />
     <state x="221" y="70" key="SettingsEditor" timestamp="1618748074395">
       <screen x="0" y="25" width="1440" height="819" />
     </state>
@@ -190,6 +211,10 @@
       <screen x="0" y="25" width="1440" height="819" />
     </state>
     <state width="507" height="445" key="SwitcherDM/0.25.1440.819@0.25.1440.819" timestamp="1618860164548" />
+    <state x="587" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1619294065931">
+      <screen x="64" y="27" width="1856" height="1053" />
+    </state>
+    <state x="587" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/64.27.1856.1053/1920.0.1920.1080@64.27.1856.1053" timestamp="1619294065931" />
     <state x="412" y="189" width="633" height="490" key="find.popup" timestamp="1618859880696">
       <screen x="0" y="25" width="1440" height="819" />
     </state>

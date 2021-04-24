@@ -20,6 +20,16 @@ TODO: DO IT!
     5. press s 
     6. User awawit compute(_functionCompute, Params)
 
+-------------------------------------------------------------------------------------------------
+TO GENERATE DI with Injectable: https://pub.dev/packages/injectable
+Run the generator #
+Use the [watch] flag to watch the files' system for edits and rebuild as necessary.
+
+--- flutter packages pub run build_runner watch  ---
+if you want the generator to run one time and exits use
+
+--- flutter packages pub run build_runner build --delete-conflicting-outputs ---
+-------------------------------------------------------------------------------------------------
 TODO: NOOO DO IT!
     1. Dont rebuild widgets that you dont nedd to and stuff like that
 

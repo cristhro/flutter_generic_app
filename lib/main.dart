@@ -8,6 +8,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_generic_app/app/app_bloc_observer.dart';
+import 'package:flutter_generic_app/data/services/firebase_crashlytics_service.dart';
 import 'package:flutter_generic_app/di/injection.dart';
 import 'package:flutter_generic_app/ui/services/index.dart';
 import 'package:injectable/injectable.dart';
@@ -21,7 +22,6 @@ Future<void> main() async {
 
   configureInjection(Environment.prod);
 
-  final ErrorService _errorService = ErrorService();
   // final AuthService _authServ = locator<AuthService>();
   //final IAnalyticsService _analyticsServ = getIt<FirebaseAnalyticsService>();
 
@@ -32,13 +32,7 @@ Future<void> main() async {
   // await _authServ.trackApplicationVersion();
   await Firebase.initializeApp();
 
-  FlutterError.onError = (FlutterErrorDetails details) async {
-    if (!kReleaseMode) {
-      FlutterError.dumpErrorToConsole(details);
-    } else {
-      Zone.current.handleUncaughtError(details.exception, details.stack!);
-    }
-  };
+  FlutterError.onError = getIt<FirebaseCrashlyticsService>().recordFlutterError;
 
   runZoned<Future<void>>(() async {
     runApp(App(authenticationRepository: AuthRepository()));
@@ -46,7 +40,7 @@ Future<void> main() async {
     Bloc.observer = AppBlocObserver();
   // ignore: deprecated_member_use
   }, onError: (error, stackTrace) async {
-    await _errorService.reportError(error, stackTrace);
+    await getIt<ErrorService>().reportError(error, stackTrace);
   });
 }
 

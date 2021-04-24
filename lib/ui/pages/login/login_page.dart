@@ -12,6 +12,7 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //FirebaseCrashlytics.instance.crash();
     return Scaffold(
       appBar: AppBar(title: const Text('Login')),
       body: Padding(
