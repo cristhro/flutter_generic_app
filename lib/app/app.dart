@@ -81,12 +81,7 @@ class _AppViewState extends State<AppView> with WidgetsBindingObserver {
           GlobalCupertinoLocalizations.delegate,
           AppLocalizations.delegate,
         ],
-        supportedLocales: [
-          Locale('es', 'ES'),
-          Locale('ca', 'ES'),
-          Locale('en', 'EN'),
-
-        ],
+        supportedLocales: AppLocalizations.suportedLocales,
         builder: (context, child) {
           return BlocListener<AuthBloc, AuthState>(
             listener: (context, state) {

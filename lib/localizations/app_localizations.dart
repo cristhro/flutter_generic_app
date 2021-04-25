@@ -9,6 +9,13 @@ class AppLocalizations {
   final Locale locale;
   Map<String, String> _localizedStrings = {};
 
+  static List<Locale> get suportedLocales {
+    return [
+      Locale('es', 'ES'),
+      Locale('ca', 'ES'),
+      Locale('en', 'EN'),
+    ];
+  }
   /// Helper method to keep the code in the widgets concise
   /// Localizations are accessed using an InheritedWidget "of" syntax
   static AppLocalizations? of(BuildContext context) {
