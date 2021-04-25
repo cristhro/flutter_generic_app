@@ -1,11 +1,9 @@
 import 'package:firebase_messaging/firebase_messaging.dart';
-import 'package:flutter_generic_app/di/injection.dart';
+import 'package:flutter_generic_app/di/injection_container.dart';
 import 'package:flutter_generic_app/domain/services/index.dart';
 import 'package:flutter_generic_app/ui/pages/home/home_page.dart';
 import 'package:flutter_generic_app/ui/services/index.dart';
-import 'package:injectable/injectable.dart';
-@injectable
-class PushNotificationService implements IPushNotificationService {
+class FirebasePushNotificationService implements IPushNotificationService {
   final FirebaseMessaging _fcm = FirebaseMessaging.instance;
   final NavigationService _navigationService = getIt<NavigationService>();
 

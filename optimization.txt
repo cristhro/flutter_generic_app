@@ -33,5 +33,9 @@ if you want the generator to run one time and exits use
 TODO: NOOO DO IT!
     1. Dont rebuild widgets that you dont nedd to and stuff like that
 
+Dependency injection
+Getit Di
+https://resocoder.com/2019/10/21/flutter-tdd-clean-architecture-course-13-dependency-injection-user-interface/
+
 Libs
     1. flutter_cache_manager

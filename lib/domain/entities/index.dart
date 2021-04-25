@@ -1,2 +1,1 @@
-export 'dialog_models.dart';
-export 'user.dart';
+export 'user/user.dart';

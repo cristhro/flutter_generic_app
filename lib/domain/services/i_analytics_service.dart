@@ -1,6 +1,3 @@
-import 'package:injectable/injectable.dart';
-
-
 mixin Events {
   static String appOnDetached = 'appDetached';
   static String appOnResumed = 'appOnResume';
@@ -8,7 +5,6 @@ mixin Events {
   static String appOnPaused = 'appPaused';
 }
 
-@injectable
 abstract class IAnalyticsService {
   // User properties tells us what the user is
   Future setUserProperties({required String userId, required String userRole});

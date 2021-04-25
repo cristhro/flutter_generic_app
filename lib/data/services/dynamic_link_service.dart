@@ -1,13 +1,11 @@
 import 'dart:developer' as developer;
 
 import 'package:firebase_dynamic_links/firebase_dynamic_links.dart';
-import 'package:flutter_generic_app/di/injection.dart';
+import 'package:flutter_generic_app/di/injection_container.dart';
 import 'package:flutter_generic_app/domain/services/index.dart';
 import 'package:flutter_generic_app/ui/pages/home/home_page.dart';
 import 'package:flutter_generic_app/ui/services/navigation_service.dart';
-import 'package:injectable/injectable.dart';
 
-@injectable
 class DynamicLinkService implements IDynamicLinkService {
   final NavigationService _navigationService = getIt<NavigationService>();
 

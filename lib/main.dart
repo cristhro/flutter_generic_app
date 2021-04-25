@@ -7,38 +7,41 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_generic_app/app/app_bloc_observer.dart';
+import 'package:flutter_generic_app/core/blocs/language_bloc.dart';
 import 'package:flutter_generic_app/data/services/firebase_crashlytics_service.dart';
-import 'package:flutter_generic_app/di/injection.dart';
-import 'package:flutter_generic_app/ui/services/index.dart';
-import 'package:injectable/injectable.dart';
-
+import 'package:flutter_generic_app/di/injection_container.dart';
 import 'app/app.dart';
 import 'data/repositories/auth_repository.dart';
 import 'data/services/error_service.dart';
+import 'di/injection_container.dart' as di;
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  configureInjection(Environment.prod);
-
-  // final AuthService _authServ = locator<AuthService>();
-  //final IAnalyticsService _analyticsServ = getIt<FirebaseAnalyticsService>();
+  await di.init();
 
   disableErrorWidget();
 
   await disableLandscapeMode();
-  // await locator<AuthenticationService>().tryLoadSession();
-  // await _authServ.trackApplicationVersion();
   await Firebase.initializeApp();
 
   FlutterError.onError = getIt<FirebaseCrashlyticsService>().recordFlutterError;
 
   runZoned<Future<void>>(() async {
-    runApp(App(authenticationRepository: AuthRepository()));
+    runApp(
+      new BlocProvider(
+        create: (_) => LanguageBloc()..add(LanguageLoadStarted()),
+        child: App(
+          authenticationRepository: AuthRepository(),
+        ),
+      ),
+    );
+
     EquatableConfig.stringify = kDebugMode;
     Bloc.observer = AppBlocObserver();
-  // ignore: deprecated_member_use
+    // ignore: deprecated_member_use
   }, onError: (error, stackTrace) async {
     await getIt<ErrorService>().reportError(error, stackTrace);
   });

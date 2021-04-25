@@ -374,6 +374,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "flutter_localizations",
+      "rootUri": "file:///home/elit/development/flutter/packages/flutter_localizations",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "flutter_test",
       "rootUri": "file:///home/elit/development/flutter/packages/flutter_test",
       "packageUri": "lib/",
@@ -428,62 +434,8 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "gql",
-      "rootUri": "file:///home/elit/.pub-cache/hosted/pub.dartlang.org/gql-0.13.0-nullsafety.2",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "gql_dedupe_link",
-      "rootUri": "file:///home/elit/.pub-cache/hosted/pub.dartlang.org/gql_dedupe_link-2.0.0-nullsafety.1",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "gql_error_link",
-      "rootUri": "file:///home/elit/.pub-cache/hosted/pub.dartlang.org/gql_error_link-0.2.0-nullsafety.1",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "gql_exec",
-      "rootUri": "file:///home/elit/.pub-cache/hosted/pub.dartlang.org/gql_exec-0.3.0-nullsafety.2",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "gql_http_link",
-      "rootUri": "file:///home/elit/.pub-cache/hosted/pub.dartlang.org/gql_http_link-0.4.0-nullsafety.1",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "gql_link",
-      "rootUri": "file:///home/elit/.pub-cache/hosted/pub.dartlang.org/gql_link-0.4.0-nullsafety.3",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "gql_transform_link",
-      "rootUri": "file:///home/elit/.pub-cache/hosted/pub.dartlang.org/gql_transform_link-0.2.0-nullsafety.1",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "graphql",
-      "rootUri": "file:///home/elit/.pub-cache/hosted/pub.dartlang.org/graphql-4.1.0-beta.2",
-      "packageUri": "lib/",
-      "languageVersion": "2.10"
-    },
-    {
       "name": "graphs",
       "rootUri": "file:///home/elit/.pub-cache/hosted/pub.dartlang.org/graphs-1.0.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "hive",
-      "rootUri": "file:///home/elit/.pub-cache/hosted/pub.dartlang.org/hive-1.6.0-nullsafety.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -502,18 +454,6 @@
     {
       "name": "http_parser",
       "rootUri": "file:///home/elit/.pub-cache/hosted/pub.dartlang.org/http_parser-4.0.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "injectable",
-      "rootUri": "file:///home/elit/.pub-cache/hosted/pub.dartlang.org/injectable-1.2.2",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "injectable_generator",
-      "rootUri": "file:///home/elit/.pub-cache/hosted/pub.dartlang.org/injectable_generator-1.2.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -580,12 +520,6 @@
     {
       "name": "nested",
       "rootUri": "file:///home/elit/.pub-cache/hosted/pub.dartlang.org/nested-1.0.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "normalize",
-      "rootUri": "file:///home/elit/.pub-cache/hosted/pub.dartlang.org/normalize-0.5.1-0.1.nullsafety.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -686,8 +620,38 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "rxdart",
-      "rootUri": "file:///home/elit/.pub-cache/hosted/pub.dartlang.org/rxdart-0.26.0",
+      "name": "shared_preferences",
+      "rootUri": "file:///home/elit/.pub-cache/hosted/pub.dartlang.org/shared_preferences-2.0.5",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "shared_preferences_linux",
+      "rootUri": "file:///home/elit/.pub-cache/hosted/pub.dartlang.org/shared_preferences_linux-2.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "shared_preferences_macos",
+      "rootUri": "file:///home/elit/.pub-cache/hosted/pub.dartlang.org/shared_preferences_macos-2.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "shared_preferences_platform_interface",
+      "rootUri": "file:///home/elit/.pub-cache/hosted/pub.dartlang.org/shared_preferences_platform_interface-2.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "shared_preferences_web",
+      "rootUri": "file:///home/elit/.pub-cache/hosted/pub.dartlang.org/shared_preferences_web-2.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "shared_preferences_windows",
+      "rootUri": "file:///home/elit/.pub-cache/hosted/pub.dartlang.org/shared_preferences_windows-2.0.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -776,12 +740,6 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "uuid",
-      "rootUri": "file:///home/elit/.pub-cache/hosted/pub.dartlang.org/uuid-3.0.4",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
       "name": "vector_math",
       "rootUri": "file:///home/elit/.pub-cache/hosted/pub.dartlang.org/vector_math-2.1.0",
       "packageUri": "lib/",
@@ -836,7 +794,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2021-04-24T19:24:44.009816Z",
+  "generated": "2021-04-25T18:04:42.576662Z",
   "generator": "pub",
   "generatorVersion": "2.12.0"
 }

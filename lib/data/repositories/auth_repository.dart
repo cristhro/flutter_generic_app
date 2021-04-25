@@ -4,7 +4,6 @@ import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 import 'package:flutter_generic_app/domain/entities/index.dart';
 import 'package:flutter_generic_app/domain/respositories/i_auth_repository.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:injectable/injectable.dart';
 
 /// Thrown if during the sign up process if a failure occurs.
 class SignUpFailure implements Exception {}
@@ -21,7 +20,6 @@ class LogOutFailure implements Exception {}
 /// {@template authentication_repository}
 /// Repository which manages user authentication.
 /// {@endtemplate}
-@injectable
 class AuthRepository implements IAuthRepository {
   /// {@macro authentication_repository}
   AuthRepository({

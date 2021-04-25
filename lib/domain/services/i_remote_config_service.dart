@@ -1,5 +1,4 @@
 
-import 'package:injectable/injectable.dart';
 
 mixin RemoteConfigConsts {
   static String showMainBanner = "show_main_banner";
@@ -8,9 +7,7 @@ mixin RemoteConfigConsts {
   };
 }
 
-@module
 abstract class IRemoteConfigService {
   bool get showMainBanner;
-  @preResolve
-  Future initialise();
+  Future initialise(); // TODO: check if initialize
 }

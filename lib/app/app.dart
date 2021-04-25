@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_generic_app/core/blocs/language_bloc.dart';
 import 'package:flutter_generic_app/data/blocs/auth/index.dart';
 import 'package:flutter_generic_app/data/repositories/auth_repository.dart';
-import 'package:flutter_generic_app/di/injection.dart';
+import 'package:flutter_generic_app/data/services/index.dart';
+import 'package:flutter_generic_app/di/injection_container.dart';
 import 'package:flutter_generic_app/domain/services/index.dart';
-import 'package:flutter_generic_app/ui/services/index.dart';
+import 'package:flutter_generic_app/localizations/app_localizations.dart';
 import 'package:flutter_generic_app/ui/theme.dart';
 import 'package:flutter_generic_app/ui/pages/home/home_page.dart';
 import 'package:flutter_generic_app/ui/pages/login/login_page.dart';
 import 'package:flutter_generic_app/ui/pages/splash/splash_page.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 class App extends StatelessWidget {
   const App({
@@ -67,33 +70,48 @@ class _AppViewState extends State<AppView> with WidgetsBindingObserver {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: theme,
-      navigatorKey: _navigatorKey,
-      builder: (context, child) {
-        return BlocListener<AuthBloc, AuthState>(
-          listener: (context, state) {
-            switch (state.status) {
-              case AuthStatus.authenticated:
-                _navigator?.pushAndRemoveUntil<void>(
-                  HomePage.route(),
-                  (route) => false,
-                );
-                break;
-              case AuthStatus.unauthenticated:
-                _navigator?.pushAndRemoveUntil<void>(
-                  LoginPage.route(),
-                  (route) => false,
-                );
-                break;
-              default:
-                break;
-            }
-          },
-          child: child,
-        );
-      },
-      onGenerateRoute: (_) => SplashPage.route(),
-    );
+    return BlocBuilder<LanguageBloc, LanguageState>(builder: (context, languageState) {
+      return MaterialApp(
+        theme: theme,
+        navigatorKey: _navigatorKey,
+        locale: languageState.locale,
+        localizationsDelegates: [
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+          AppLocalizations.delegate,
+        ],
+        supportedLocales: [
+          Locale('es', 'ES'),
+          Locale('ca', 'ES'),
+          Locale('en', 'EN'),
+
+        ],
+        builder: (context, child) {
+          return BlocListener<AuthBloc, AuthState>(
+            listener: (context, state) {
+              switch (state.status) {
+                case AuthStatus.authenticated:
+                  _navigator?.pushAndRemoveUntil<void>(
+                    HomePage.route(),
+                    (route) => false,
+                  );
+                  break;
+                case AuthStatus.unauthenticated:
+                  _navigator?.pushAndRemoveUntil<void>(
+                    LoginPage.route(),
+                    (route) => false,
+                  );
+                  break;
+                default:
+                  break;
+              }
+            },
+            child: child,
+          );
+        },
+        onGenerateRoute: (_) => SplashPage.route(),
+      );
+    });
   }
 }

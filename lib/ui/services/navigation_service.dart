@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:injectable/injectable.dart';
-@singleton
+
 class NavigationService {
   final GlobalKey<NavigatorState> _navigationKey = GlobalKey<NavigatorState>();
 

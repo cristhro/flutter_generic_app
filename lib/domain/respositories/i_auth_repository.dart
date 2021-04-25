@@ -1,7 +1,5 @@
-import 'package:flutter_generic_app/domain/entities/user.dart';
-import 'package:injectable/injectable.dart';
+import 'package:flutter_generic_app/domain/entities/user/user.dart';
 
-@injectable
 abstract class IAuthRepository {
   Stream<User>? get user => null;
 

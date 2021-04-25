@@ -2,9 +2,7 @@ import 'dart:developer' as developer;
 
 import 'package:firebase_remote_config/firebase_remote_config.dart';
 import 'package:flutter_generic_app/domain/services/index.dart';
-import 'package:injectable/injectable.dart';
 
-@injectable
 class FirebaseRemoteConfigService implements IRemoteConfigService {
   final RemoteConfig _remoteConfig;
 
