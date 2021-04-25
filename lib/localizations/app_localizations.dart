@@ -1,4 +1,3 @@
-
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
@@ -10,7 +9,6 @@ class AppLocalizations {
   final Locale locale;
   Map<String, String> _localizedStrings = {};
 
-
   /// Helper method to keep the code in the widgets concise
   /// Localizations are accessed using an InheritedWidget "of" syntax
   static AppLocalizations? of(BuildContext context) {
@@ -18,21 +16,15 @@ class AppLocalizations {
   }
 
   /// Static member to have a simple access to the delegate from the MaterialApp
-  static const LocalizationsDelegate<AppLocalizations> delegate =
-  _AppLocalizationsDelegate();
-
+  static const LocalizationsDelegate<AppLocalizations> delegate = _AppLocalizationsDelegate();
 
   Future<bool> load() async {
     Map<String, dynamic> jsonMap = {};
 
     try {
-      print(locale.languageCode);
-      String jsonString =
-      await rootBundle.loadString('assets/langs/${locale.languageCode}.json');
-      print('<--- ');
-      print('<--- ${jsonString}');
+      String jsonString = await rootBundle.loadString('assets/langs/${locale.languageCode}.json');
       jsonMap = json.decode(jsonString) as Map<String, dynamic>;
-    } catch (e) { }
+    } catch (e) {}
 
     _localizedStrings = jsonMap.map((key, value) {
       return MapEntry(key, value.toString());
@@ -46,8 +38,7 @@ class AppLocalizations {
   }
 }
 
-class _AppLocalizationsDelegate
-    extends LocalizationsDelegate<AppLocalizations> {
+class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
   const _AppLocalizationsDelegate();
 
   // add all languages code here

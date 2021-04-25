@@ -1,1 +1,0 @@
-enum EnumUser { familia, monitor, autorizado }

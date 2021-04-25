@@ -50,6 +50,8 @@ class LanguageBloc extends Bloc<LanguageEvent, LanguageState> {
       yield* _loadLanguage('es', 'ES');
     } else if (selectedLanguage == Language.EN && defaultLanguageCode != 'en') {
       yield* _loadLanguage('en', 'US');
+    } else if (selectedLanguage == Language.CA && defaultLanguageCode != 'ca') {
+      yield* _loadLanguage('ca', 'ES');
     }
   }
 

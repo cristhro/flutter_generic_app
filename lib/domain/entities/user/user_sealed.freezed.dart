@@ -12,13 +12,28 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
+User _$UserFromJson(Map<String, dynamic> json) {
+  switch (json['runtimeType'] as String) {
+    case 'familia':
+      return _Familia.fromJson(json);
+    case 'monitor':
+      return _Monitor.fromJson(json);
+    case 'autorizado':
+      return _Autorizado.fromJson(json);
+
+    default:
+      throw FallThroughError();
+  }
+}
+
 /// @nodoc
 class _$UserTearOff {
   const _$UserTearOff();
 
-  _Familia familia({required String name}) {
+  _Familia familia({required String name, required bool esSocio}) {
     return _Familia(
       name: name,
+      esSocio: esSocio,
     );
   }
 
@@ -28,10 +43,16 @@ class _$UserTearOff {
     );
   }
 
-  _Autorizado autorizado({required String name}) {
+  _Autorizado autorizado(
+      {required String name, required bool tieneAutorizacion}) {
     return _Autorizado(
       name: name,
+      tieneAutorizacion: tieneAutorizacion,
     );
+  }
+
+  User fromJson(Map<String, Object> json) {
+    return User.fromJson(json);
   }
 }
 
@@ -44,16 +65,16 @@ mixin _$User {
 
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String name) familia,
+    required TResult Function(String name, bool esSocio) familia,
     required TResult Function(String name) monitor,
-    required TResult Function(String name) autorizado,
+    required TResult Function(String name, bool tieneAutorizacion) autorizado,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String name)? familia,
+    TResult Function(String name, bool esSocio)? familia,
     TResult Function(String name)? monitor,
-    TResult Function(String name)? autorizado,
+    TResult Function(String name, bool tieneAutorizacion)? autorizado,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -72,7 +93,7 @@ mixin _$User {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
-
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $UserCopyWith<User> get copyWith => throw _privateConstructorUsedError;
 }
@@ -110,7 +131,7 @@ abstract class _$FamiliaCopyWith<$Res> implements $UserCopyWith<$Res> {
   factory _$FamiliaCopyWith(_Familia value, $Res Function(_Familia) then) =
       __$FamiliaCopyWithImpl<$Res>;
   @override
-  $Res call({String name});
+  $Res call({String name, bool esSocio});
 }
 
 /// @nodoc
@@ -125,27 +146,37 @@ class __$FamiliaCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
   @override
   $Res call({
     Object? name = freezed,
+    Object? esSocio = freezed,
   }) {
     return _then(_Familia(
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
+      esSocio: esSocio == freezed
+          ? _value.esSocio
+          : esSocio // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
 
 /// @nodoc
+@JsonSerializable()
+class _$_Familia extends _Familia {
+  const _$_Familia({required this.name, required this.esSocio}) : super._();
 
-class _$_Familia implements _Familia {
-  const _$_Familia({required this.name});
+  factory _$_Familia.fromJson(Map<String, dynamic> json) =>
+      _$_$_FamiliaFromJson(json);
 
   @override
   final String name;
+  @override
+  final bool esSocio;
 
   @override
   String toString() {
-    return 'User.familia(name: $name)';
+    return 'User.familia(name: $name, esSocio: $esSocio)';
   }
 
   @override
@@ -153,12 +184,16 @@ class _$_Familia implements _Familia {
     return identical(this, other) ||
         (other is _Familia &&
             (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)));
+                const DeepCollectionEquality().equals(other.name, name)) &&
+            (identical(other.esSocio, esSocio) ||
+                const DeepCollectionEquality().equals(other.esSocio, esSocio)));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(name);
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(name) ^
+      const DeepCollectionEquality().hash(esSocio);
 
   @JsonKey(ignore: true)
   @override
@@ -168,23 +203,23 @@ class _$_Familia implements _Familia {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String name) familia,
+    required TResult Function(String name, bool esSocio) familia,
     required TResult Function(String name) monitor,
-    required TResult Function(String name) autorizado,
+    required TResult Function(String name, bool tieneAutorizacion) autorizado,
   }) {
-    return familia(name);
+    return familia(name, esSocio);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String name)? familia,
+    TResult Function(String name, bool esSocio)? familia,
     TResult Function(String name)? monitor,
-    TResult Function(String name)? autorizado,
+    TResult Function(String name, bool tieneAutorizacion)? autorizado,
     required TResult orElse(),
   }) {
     if (familia != null) {
-      return familia(name);
+      return familia(name, esSocio);
     }
     return orElse();
   }
@@ -212,13 +247,23 @@ class _$_Familia implements _Familia {
     }
     return orElse();
   }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_FamiliaToJson(this)..['runtimeType'] = 'familia';
+  }
 }
 
-abstract class _Familia implements User {
-  const factory _Familia({required String name}) = _$_Familia;
+abstract class _Familia extends User {
+  const factory _Familia({required String name, required bool esSocio}) =
+      _$_Familia;
+  const _Familia._() : super._();
+
+  factory _Familia.fromJson(Map<String, dynamic> json) = _$_Familia.fromJson;
 
   @override
   String get name => throw _privateConstructorUsedError;
+  bool get esSocio => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$FamiliaCopyWith<_Familia> get copyWith =>
@@ -256,9 +301,12 @@ class __$MonitorCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
 }
 
 /// @nodoc
+@JsonSerializable()
+class _$_Monitor extends _Monitor {
+  const _$_Monitor({required this.name}) : super._();
 
-class _$_Monitor implements _Monitor {
-  const _$_Monitor({required this.name});
+  factory _$_Monitor.fromJson(Map<String, dynamic> json) =>
+      _$_$_MonitorFromJson(json);
 
   @override
   final String name;
@@ -288,9 +336,9 @@ class _$_Monitor implements _Monitor {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String name) familia,
+    required TResult Function(String name, bool esSocio) familia,
     required TResult Function(String name) monitor,
-    required TResult Function(String name) autorizado,
+    required TResult Function(String name, bool tieneAutorizacion) autorizado,
   }) {
     return monitor(name);
   }
@@ -298,9 +346,9 @@ class _$_Monitor implements _Monitor {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String name)? familia,
+    TResult Function(String name, bool esSocio)? familia,
     TResult Function(String name)? monitor,
-    TResult Function(String name)? autorizado,
+    TResult Function(String name, bool tieneAutorizacion)? autorizado,
     required TResult orElse(),
   }) {
     if (monitor != null) {
@@ -332,10 +380,18 @@ class _$_Monitor implements _Monitor {
     }
     return orElse();
   }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_MonitorToJson(this)..['runtimeType'] = 'monitor';
+  }
 }
 
-abstract class _Monitor implements User {
+abstract class _Monitor extends User {
   const factory _Monitor({required String name}) = _$_Monitor;
+  const _Monitor._() : super._();
+
+  factory _Monitor.fromJson(Map<String, dynamic> json) = _$_Monitor.fromJson;
 
   @override
   String get name => throw _privateConstructorUsedError;
@@ -351,7 +407,7 @@ abstract class _$AutorizadoCopyWith<$Res> implements $UserCopyWith<$Res> {
           _Autorizado value, $Res Function(_Autorizado) then) =
       __$AutorizadoCopyWithImpl<$Res>;
   @override
-  $Res call({String name});
+  $Res call({String name, bool tieneAutorizacion});
 }
 
 /// @nodoc
@@ -367,27 +423,38 @@ class __$AutorizadoCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
   @override
   $Res call({
     Object? name = freezed,
+    Object? tieneAutorizacion = freezed,
   }) {
     return _then(_Autorizado(
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
+      tieneAutorizacion: tieneAutorizacion == freezed
+          ? _value.tieneAutorizacion
+          : tieneAutorizacion // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
 
 /// @nodoc
+@JsonSerializable()
+class _$_Autorizado extends _Autorizado {
+  const _$_Autorizado({required this.name, required this.tieneAutorizacion})
+      : super._();
 
-class _$_Autorizado implements _Autorizado {
-  const _$_Autorizado({required this.name});
+  factory _$_Autorizado.fromJson(Map<String, dynamic> json) =>
+      _$_$_AutorizadoFromJson(json);
 
   @override
   final String name;
+  @override
+  final bool tieneAutorizacion;
 
   @override
   String toString() {
-    return 'User.autorizado(name: $name)';
+    return 'User.autorizado(name: $name, tieneAutorizacion: $tieneAutorizacion)';
   }
 
   @override
@@ -395,12 +462,17 @@ class _$_Autorizado implements _Autorizado {
     return identical(this, other) ||
         (other is _Autorizado &&
             (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)));
+                const DeepCollectionEquality().equals(other.name, name)) &&
+            (identical(other.tieneAutorizacion, tieneAutorizacion) ||
+                const DeepCollectionEquality()
+                    .equals(other.tieneAutorizacion, tieneAutorizacion)));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(name);
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(name) ^
+      const DeepCollectionEquality().hash(tieneAutorizacion);
 
   @JsonKey(ignore: true)
   @override
@@ -410,23 +482,23 @@ class _$_Autorizado implements _Autorizado {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String name) familia,
+    required TResult Function(String name, bool esSocio) familia,
     required TResult Function(String name) monitor,
-    required TResult Function(String name) autorizado,
+    required TResult Function(String name, bool tieneAutorizacion) autorizado,
   }) {
-    return autorizado(name);
+    return autorizado(name, tieneAutorizacion);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String name)? familia,
+    TResult Function(String name, bool esSocio)? familia,
     TResult Function(String name)? monitor,
-    TResult Function(String name)? autorizado,
+    TResult Function(String name, bool tieneAutorizacion)? autorizado,
     required TResult orElse(),
   }) {
     if (autorizado != null) {
-      return autorizado(name);
+      return autorizado(name, tieneAutorizacion);
     }
     return orElse();
   }
@@ -454,13 +526,24 @@ class _$_Autorizado implements _Autorizado {
     }
     return orElse();
   }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_AutorizadoToJson(this)..['runtimeType'] = 'autorizado';
+  }
 }
 
-abstract class _Autorizado implements User {
-  const factory _Autorizado({required String name}) = _$_Autorizado;
+abstract class _Autorizado extends User {
+  const factory _Autorizado(
+      {required String name, required bool tieneAutorizacion}) = _$_Autorizado;
+  const _Autorizado._() : super._();
+
+  factory _Autorizado.fromJson(Map<String, dynamic> json) =
+      _$_Autorizado.fromJson;
 
   @override
   String get name => throw _privateConstructorUsedError;
+  bool get tieneAutorizacion => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$AutorizadoCopyWith<_Autorizado> get copyWith =>

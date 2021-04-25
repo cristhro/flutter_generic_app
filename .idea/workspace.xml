@@ -20,20 +20,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9978cfd-75a8-4817-a1af-9837521877d0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/domain/entities/user/user_sealed.freezed.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/ui/pages/home/widgets/home_autorizado.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/ui/pages/home/widgets/home_familia.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/ui/pages/home/widgets/home_monitor.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/domain/entities/user/user_sealed.g.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/.packages" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/langs/ca.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/langs/ca.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/langs/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/langs/en.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/langs/es.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/langs/es.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app.apk.sha1" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app.apk.sha1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/blocs/language_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/blocs/language_bloc.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/blocs/language_state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/blocs/language_state.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/domain/entities/user/user_enum.dart" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/domain/entities/user/user_sealed.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/domain/entities/user/user_sealed.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/domain/entities/user/user_sealed.freezed.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/domain/entities/user/user_sealed.freezed.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/localizations/app_localizations.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/localizations/app_localizations.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/ui/pages/home/home_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/pages/home/home_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui/pages/login/login_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/pages/login/login_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,26 +197,26 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2649" y="264" width="424" height="491" key="FileChooserDialogImpl/64.27.1856.1053/1920.0.1920.1080@64.27.1856.1053" timestamp="1619348386070" />
-    <state width="1810" height="386" key="GridCell.Tab.0.bottom" timestamp="1619377862424">
+    <state width="1810" height="403" key="GridCell.Tab.0.bottom" timestamp="1619383062749">
       <screen x="64" y="27" width="1856" height="1053" />
     </state>
     <state width="1398" height="172" key="GridCell.Tab.0.bottom/0.25.1440.819@0.25.1440.819" timestamp="1618868062519" />
-    <state width="1810" height="386" key="GridCell.Tab.0.bottom/64.27.1856.1053/1920.0.1920.1080@64.27.1856.1053" timestamp="1619377862424" />
-    <state width="1810" height="386" key="GridCell.Tab.0.center" timestamp="1619377862424">
+    <state width="1810" height="403" key="GridCell.Tab.0.bottom/64.27.1856.1053/1920.0.1920.1080@64.27.1856.1053" timestamp="1619383062749" />
+    <state width="1810" height="403" key="GridCell.Tab.0.center" timestamp="1619383062749">
       <screen x="64" y="27" width="1856" height="1053" />
     </state>
     <state width="1398" height="172" key="GridCell.Tab.0.center/0.25.1440.819@0.25.1440.819" timestamp="1618868062516" />
-    <state width="1810" height="386" key="GridCell.Tab.0.center/64.27.1856.1053/1920.0.1920.1080@64.27.1856.1053" timestamp="1619377862424" />
-    <state width="1810" height="386" key="GridCell.Tab.0.left" timestamp="1619377862424">
+    <state width="1810" height="403" key="GridCell.Tab.0.center/64.27.1856.1053/1920.0.1920.1080@64.27.1856.1053" timestamp="1619383062749" />
+    <state width="1810" height="403" key="GridCell.Tab.0.left" timestamp="1619383062749">
       <screen x="64" y="27" width="1856" height="1053" />
     </state>
     <state width="1398" height="172" key="GridCell.Tab.0.left/0.25.1440.819@0.25.1440.819" timestamp="1618868062515" />
-    <state width="1810" height="386" key="GridCell.Tab.0.left/64.27.1856.1053/1920.0.1920.1080@64.27.1856.1053" timestamp="1619377862424" />
-    <state width="1810" height="386" key="GridCell.Tab.0.right" timestamp="1619377862424">
+    <state width="1810" height="403" key="GridCell.Tab.0.left/64.27.1856.1053/1920.0.1920.1080@64.27.1856.1053" timestamp="1619383062749" />
+    <state width="1810" height="403" key="GridCell.Tab.0.right" timestamp="1619383062749">
       <screen x="64" y="27" width="1856" height="1053" />
     </state>
     <state width="1398" height="172" key="GridCell.Tab.0.right/0.25.1440.819@0.25.1440.819" timestamp="1618868062518" />
-    <state width="1810" height="386" key="GridCell.Tab.0.right/64.27.1856.1053/1920.0.1920.1080@64.27.1856.1053" timestamp="1619377862424" />
+    <state width="1810" height="403" key="GridCell.Tab.0.right/64.27.1856.1053/1920.0.1920.1080@64.27.1856.1053" timestamp="1619383062749" />
     <state x="349" y="85" width="1022" height="737" key="SettingsEditor" timestamp="1619370314732">
       <screen x="64" y="27" width="1856" height="1053" />
     </state>
@@ -234,10 +235,10 @@
     </state>
     <state x="412" y="189" width="633" height="490" key="find.popup/0.25.1440.819@0.25.1440.819" timestamp="1618859880696" />
     <state x="595" y="238" width="816" height="630" key="find.popup/64.27.1856.1053/1920.0.1920.1080@64.27.1856.1053" timestamp="1619371975391" />
-    <state x="655" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1619370291185">
+    <state x="655" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1619382043565">
       <screen x="64" y="27" width="1856" height="1053" />
     </state>
-    <state x="655" y="259" width="672" height="678" key="search.everywhere.popup/64.27.1856.1053/1920.0.1920.1080@64.27.1856.1053" timestamp="1619370291185" />
+    <state x="655" y="259" width="672" height="678" key="search.everywhere.popup/64.27.1856.1053/1920.0.1920.1080@64.27.1856.1053" timestamp="1619382043565" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -246,6 +247,11 @@
           <url>file://$PROJECT_DIR$/lib/core/blocs/language_bloc_old/language_bloc.dart</url>
           <line>35</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/ui/pages/home/home_page.dart</url>
+          <line>18</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
